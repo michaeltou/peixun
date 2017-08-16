@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C8A81DB1F43B3B6001EFC0F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A81DA1F43B3B6001EFC0F /* LoginViewController.m */; };
+		4C8A81DF1F43FC1E001EFC0F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A81DE1F43FC1E001EFC0F /* MineViewController.m */; };
 		4CD5CF5B1EEA2D3400AE4BAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5CF5A1EEA2D3400AE4BAD /* main.m */; };
 		4CD5CF5E1EEA2D3400AE4BAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5CF5D1EEA2D3400AE4BAD /* AppDelegate.m */; };
 		4CD5CF671EEA2D3400AE4BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5CF651EEA2D3400AE4BAD /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		2F45DAF258B23480D7DDD4B4 /* libPods-peixun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peixun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8A81D91F43B3B6001EFC0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = login/LoginViewController.h; sourceTree = "<group>"; };
 		4C8A81DA1F43B3B6001EFC0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = login/LoginViewController.m; sourceTree = "<group>"; };
+		4C8A81DD1F43FC1E001EFC0F /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = Mine/MineViewController.h; sourceTree = "<group>"; };
+		4C8A81DE1F43FC1E001EFC0F /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = Mine/MineViewController.m; sourceTree = "<group>"; };
 		4CD5CF561EEA2D3400AE4BAD /* peixun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peixun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD5CF5A1EEA2D3400AE4BAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CD5CF5C1EEA2D3400AE4BAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,15 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		4C8A81DC1F43FBE3001EFC0F /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A81DD1F43FC1E001EFC0F /* MineViewController.h */,
+				4C8A81DE1F43FC1E001EFC0F /* MineViewController.m */,
+			);
+			name = mine;
+			sourceTree = "<group>";
+		};
 		4CD5CF4D1EEA2D3300AE4BAD = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,7 @@
 		4CD5CF581EEA2D3400AE4BAD /* peixun */ = {
 			isa = PBXGroup;
 			children = (
+				4C8A81DC1F43FBE3001EFC0F /* mine */,
 				4C8A81D81F43B373001EFC0F /* login */,
 				4CD5CF7F1EF40F6100AE4BAD /* player */,
 				4CD5CF5C1EEA2D3400AE4BAD /* AppDelegate.h */,
@@ -258,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD5CF5E1EEA2D3400AE4BAD /* AppDelegate.m in Sources */,
+				4C8A81DF1F43FC1E001EFC0F /* MineViewController.m in Sources */,
 				4CD5CF5B1EEA2D3400AE4BAD /* main.m in Sources */,
 				4C8A81DB1F43B3B6001EFC0F /* LoginViewController.m in Sources */,
 				4CD5CF821EF40F8500AE4BAD /* PlayerTableViewController.m in Sources */,

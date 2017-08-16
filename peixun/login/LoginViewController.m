@@ -17,6 +17,16 @@
 
 @implementation LoginViewController
 
+
+- (IBAction)backNavigate:(id)sender {
+    
+    
+     
+
+     [self dismissViewControllerAnimated:YES completion:nil];//从nextVC界面回去
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -40,6 +50,9 @@
 
 
 - (IBAction)login:(id)sender {
+    
+    
+    
     
     NSString * username= [_usernametext text];
     NSString * password = [_passwordtext text];

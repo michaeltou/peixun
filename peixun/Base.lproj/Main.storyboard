@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--tabview-->
         <scene sceneID="9dI-z9-zTU">
             <objects>
-                <tabBarController id="MLx-k7-YeZ" sceneMemberID="viewController">
+                <tabBarController title="tabview" id="MLx-k7-YeZ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YW6-nM-rGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,7 +21,6 @@
                     <connections>
                         <segue destination="EU0-GB-Ffa" kind="relationship" relationship="viewControllers" id="W5a-OY-u8n"/>
                         <segue destination="LbG-0Q-HsO" kind="relationship" relationship="viewControllers" id="XNf-dl-tvC"/>
-                        <segue destination="LcI-z7-lpJ" kind="relationship" relationship="viewControllers" id="0PM-qy-HG5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ao-e5-EMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +75,7 @@
         <!--login-->
         <scene sceneID="1rG-Ud-CtZ">
             <objects>
-                <viewController id="LcI-z7-lpJ" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginscene" id="LcI-z7-lpJ" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gE9-8n-e1j"/>
                         <viewControllerLayoutGuide type="bottom" id="IUg-YQ-7uI"/>
@@ -128,10 +127,19 @@
                                     <action selector="login:" destination="LcI-z7-lpJ" eventType="touchUpInside" id="HMU-so-79G"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-Qe-9X7">
+                                <rect key="frame" x="16" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="backNavigate:" destination="LcI-z7-lpJ" eventType="touchUpInside" id="MQA-ju-lVv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="login" id="wlt-A5-owK"/>
+                    <navigationItem key="navigationItem" id="s9C-4Z-NX7"/>
                     <connections>
                         <outlet property="passwordtext" destination="bCv-Az-8da" id="2cF-jm-YoK"/>
                         <outlet property="usernametext" destination="r8H-Qf-jVl" id="0s7-aU-XKH"/>
@@ -139,12 +147,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NlP-dD-qhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="1239.1304347826087"/>
+            <point key="canvasLocation" x="94" y="1688"/>
         </scene>
         <!--mine-->
         <scene sceneID="fXZ-MJ-yEP">
             <objects>
-                <viewController title="mine" id="LbG-0Q-HsO" sceneMemberID="viewController">
+                <viewController title="mine" id="LbG-0Q-HsO" customClass="MineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cn7-QK-AYf"/>
                         <viewControllerLayoutGuide type="bottom" id="HjJ-uG-6TZ"/>
@@ -152,6 +160,16 @@
                     <view key="view" contentMode="scaleToFill" id="agg-Vf-Aal">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qw-9S-nVj">
+                                <rect key="frame" x="150" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="gotoLoginPage:" destination="LbG-0Q-HsO" eventType="touchUpInside" id="wHW-kS-e25"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的" image="arrow.png" id="uLi-WH-g8t"/>
